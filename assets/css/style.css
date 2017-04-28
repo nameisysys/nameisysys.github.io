@@ -219,7 +219,7 @@ header {
   text-align: center;
   color: #ffffff;
   padding: 12px 0;
-  margin-top: 44px;
+  margin-top: 35px;
   transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1); }
   .view-btn:hover {
     color: #182d4e;
@@ -444,7 +444,7 @@ header {
     .news-eBrain .news-item-text .news-title {
       font-size: 32px;
       font-weight: 300;
-      line-height: 0.88;
+      line-height: 1.0;
       color: #2dc1f0;
       overflow: hidden;
       white-space: nowrap;
