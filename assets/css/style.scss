@@ -595,11 +595,12 @@ header {
     background-color: #182d4e;
     .newsletter-text {
         font-size: 28px;
-        font-weight: 300;
+        font-weight: 200;
         line-height: 1.14;
         color: #ffffff;
         color: #fff;
         float:left;
+        margin-top: 20px;
     }
     .email-wrap {
         float:right;
@@ -634,7 +635,50 @@ header {
 }
 
 footer {
-    .col {
+    padding: 44px 0 80px;
+    .logo img { width: 124px; height: 33px; }
+    .col { 
         width: 33%;
+        float: left;
+    }
+    
+    .sitemap-wrapper {
+        margin-top: 33px; 
+    }
+    .menu-title > a {
+        font-size: 18px;
+        font-weight: 400;
+        line-height: 1.67;
+        color: #8f8f8f;
+    }
+    .menu-item {
+        font-size: 14px;
+        line-height: 2.14;
+        color: #8f8f8f;
+    }
+    .text-skyblue {
+        color: #42C8F2;
+    }
+    .menu-item > a { 
+        font-size: 14px;
+        line-height: 2.14;
+        color: #8f8f8f; 
+    }
+    .home, .blog, .contact, .follow {
+        margin-bottom: 19px;
+    }
+    .menu-title { 
+        text-transform: uppercase;
+    }
+    .contact-info ul li {
+        line-height: 1.71;
+        margin-bottom: 19px;
+    }
+    .image-item { 
+        float: left;
+        margin-right: 13px;
+        img {
+            width: 50px;
+        }
     }
 }

@@ -474,11 +474,12 @@ header {
   background-color: #182d4e; }
   .newsletter-eBrain .newsletter-text {
     font-size: 28px;
-    font-weight: 300;
+    font-weight: 200;
     line-height: 1.14;
     color: #ffffff;
     color: #fff;
-    float: left; }
+    float: left;
+    margin-top: 20px; }
   .newsletter-eBrain .email-wrap {
     float: right;
     width: 453px;
@@ -507,5 +508,40 @@ header {
       float: right;
       cursor: pointer; }
 
-footer .col {
-  width: 33%; }
+footer {
+  padding: 44px 0 80px; }
+  footer .logo img {
+    width: 124px;
+    height: 33px; }
+  footer .col {
+    width: 33%;
+    float: left; }
+  footer .sitemap-wrapper {
+    margin-top: 33px; }
+  footer .menu-title > a {
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.67;
+    color: #8f8f8f; }
+  footer .menu-item {
+    font-size: 14px;
+    line-height: 2.14;
+    color: #8f8f8f; }
+  footer .text-skyblue {
+    color: #42C8F2; }
+  footer .menu-item > a {
+    font-size: 14px;
+    line-height: 2.14;
+    color: #8f8f8f; }
+  footer .home, footer .blog, footer .contact, footer .follow {
+    margin-bottom: 19px; }
+  footer .menu-title {
+    text-transform: uppercase; }
+  footer .contact-info ul li {
+    line-height: 1.71;
+    margin-bottom: 19px; }
+  footer .image-item {
+    float: left;
+    margin-right: 13px; }
+    footer .image-item img {
+      width: 50px; }
