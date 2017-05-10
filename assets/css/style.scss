@@ -126,6 +126,11 @@ header {
         font-size: 25px;
         font-weight: 300;
     }
+    .section-title { 
+        font-size: 40px;
+        color: #13213d;
+        text-align: left
+    }
 }
 
 .hero-caption {
@@ -534,7 +539,6 @@ header {
     text-align: center;
     .section-title {
         padding: 66px 0 29px;
-        text-align: center;
     }
     .news-item {
         padding: 47px 0 52px; 
@@ -656,6 +660,16 @@ header {
         }
     }
     
+}
+
+.pagenation {
+    padding-top: 44px; 
+    text-align: center;
+    a {
+        padding: 0 7px;
+        color: #d1d1d1;
+    }
+    a.on { color: #2dc1f0; }
 }
 
 footer {
