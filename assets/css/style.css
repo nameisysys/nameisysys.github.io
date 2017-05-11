@@ -61,6 +61,7 @@ html {
   opacity: 0.77;
   background-color: #020a16; }
 
+/*svg*/
 header {
   width: 100%;
   position: absolute;
@@ -68,6 +69,7 @@ header {
   left: 0;
   padding-top: 34px; }
   header .logo {
+    width: 121px;
     float: left; }
     header .logo img {
       width: 121px; }
@@ -91,7 +93,9 @@ header {
 
 .subpage .hero-wrapper {
   padding-top: 71px;
-  height: 340px; }
+  height: 340px;
+  background-size: 100%;
+  background-attachment: fixed; }
 
 .subpage .hero-caption {
   padding-top: 60px; }
@@ -110,6 +114,10 @@ header {
   font-size: 40px;
   color: #13213d;
   text-align: left; }
+
+.subpage .news-info {
+  background-position: center -15px;
+  background-image: url("/assets/images/newsinfo-image.png"); }
 
 .hero-caption {
   width: 100%;

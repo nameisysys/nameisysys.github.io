@@ -74,6 +74,9 @@ html {
     background-color: #020a16;
 }
 
+/*svg*/
+
+
 header {
     width: 100%;
     position: absolute;
@@ -81,6 +84,7 @@ header {
     left: 0;
     padding-top: 34px;
     .logo {
+        width: 121px;
         float: left;
         img {
             width: 121px;
@@ -112,6 +116,8 @@ header {
     .hero-wrapper {
         padding-top: 71px;
         height: 340px;
+        background-size: 100%;
+        background-attachment: fixed;
     }
     .hero-caption {
         padding-top: 60px;
@@ -130,6 +136,11 @@ header {
         font-size: 40px;
         color: #13213d;
         text-align: left
+    }
+    
+    .news-info {
+        background-position: center -15px;
+        background-image: url('/assets/images/newsinfo-image.png')
     }
 }
 
