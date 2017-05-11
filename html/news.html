@@ -5,37 +5,25 @@
     <meta charset="UTF-8">
     <title>eBrain</title>
     <!-- <meta name="description" content="DESCRIPTION"> -->
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="../assets/css/reset.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+    <script
+  src="https://code.jquery.com/jquery-1.10.1.min.js"
+  integrity="sha256-SDf34fFWX/ZnUozXXEH0AeB+Ip3hvRsjLwp6QNTEb3k="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        $(window).on('scroll',function() {
+            console.log("scroll!");
+            if ($(window).scrollTop() >= 50) {
+                $('header').addClass('sticky-header');
+            } else {
+                $('header').removeClass('sticky-header');
+            }
+        });
+    </script>
     <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
    <![endif]-->
-    <script type="text/javascript">
-        console.log('dd');
-        var h = document.getElementById("header");
-        var stuck = false;
-        var stickPoint = getDistance();
-
-        function getDistance() {
-            var topDist = h.offsetTop;
-            return topDist;
-        }
-
-        window.onscroll = function (e) {
-        console.log('dd');
-            var distance = getDistance() - window.pageYOffset;
-            var offset = window.pageYOffset;
-            console.log(stickPoint + '   ' + distance + '   ' + offset + '   ' + stuck);
-            if ((distance <= 0) && !stuck) {
-                h.style.position = 'fixed';
-                h.style.top = '0px';
-                stuck = true;
-            } else if (stuck && (offset <= stickPoint)) {
-                h.style.position = 'static';
-                stuck = false;
-            }
-        }
-    </script>
 </head>
 
 <body class="subpage">
@@ -46,18 +34,18 @@
                     <input type="text" maxlength="16">
                 </div>
                 <div class="search-icon">
-                    <a href="" target="blank"><img src="/assets/images/fb-icon@2x.png" alt="" class="icon"></a>
-                    <a href="" target="blank"><img src="/assets/images/youtube-icon@2x.png" alt="" class="icon"></a>
-                    <a href="" target="blank"><img src="/assets/images/share-icon@2x.png" alt="" class="icon"></a>
+                    <a href="" target="blank"><img src="../assets/images/vec-fb.png" alt="" class="icon"></a>
+                    <a href="" target="blank"><img src="../assets/images/youtube-icon@2x.png" alt="" class="icon"></a>
+                    <a href="" target="blank"><img src="../assets/images/share-icon@2x.png" alt="" class="icon"></a>
                 </div>
             </div>
         </div>
     </div>
     <section class="hero-wrapper news-info">
-        <header id="header">
+        <header>
             <div class="inside clear">
                 <a href="" class="logo">
-                    <!--                <img src="/assets/images/brain-logo.svg" alt="">-->
+                    <!--                <img src="../assets/images/brain-logo.svg" alt="">-->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.4 63.1" class="logo">
                         <defs>
                             <style>
@@ -110,7 +98,7 @@
             <h1 class="section-title">NEWS &amp; INFORMATION</h1>
             <ul>
                 <li class="news-item clear">
-                    <div class="news-item-img" style="background-image:url('/assets/images/consulting-img@2x.png');">
+                    <div class="news-item-img" style="background-image:url('../assets/images/consulting-img@2x.png');">
                         <span class="news-type academy">Academy</span>
                     </div>
                     <div class="news-item-text">
@@ -121,7 +109,7 @@
                     </div>
                 </li>
                 <li class="news-item clear">
-                    <div class="news-item-img" style="background-image:url('/assets/images/consulting-img@2x.png');">
+                    <div class="news-item-img" style="background-image:url('../assets/images/consulting-img@2x.png');">
                         <span class="news-type blog">Blog</span>
                     </div>
                     <div class="news-item-text">
@@ -132,7 +120,7 @@
                     </div>
                 </li>
                 <li class="news-item clear">
-                    <div class="news-item-img" style="background-image:url('/assets/images/consulting-img@2x.png');">
+                    <div class="news-item-img" style="background-image:url('../assets/images/consulting-img@2x.png');">
                         <span class="news-type news">News</span>
                     </div>
                     <div class="news-item-text">
@@ -161,7 +149,7 @@
     </section>
     <footer>
         <div class="inside clear">
-            <div class="logo"><img src="/assets/images/ebrain-logo-icon@2x.png" alt=""></div>
+            <div class="logo"><img src="../assets/images/ebrain-logo-icon@2x.png" alt=""></div>
             <div class="col">
                 <ul class="sitemap-wrapper">
                     <li class="menu-title home">
@@ -215,13 +203,13 @@
                         <a href="">Follow us</a>
                     </li>
                     <li class="menu-title image-item">
-                        <a href=""><img src="/assets/images/facebook-logo-footer-icon@2x.png" alt="Facebook icon"></a>
+                        <a href=""><img src="../assets/images/facebook-logo-footer-icon@2x.png" alt="Facebook icon"></a>
                     </li>
                     <li class="menu-title image-item">
-                        <a href=""><img src="/assets/images/youtube-footer-icon@2x.png" alt="Youtube icon"></a>
+                        <a href=""><img src="../assets/images/youtube-footer-icon@2x.png" alt="Youtube icon"></a>
                     </li>
                     <li class="menu-title image-item">
-                        <a href=""><img src="/assets/images/share-footer-icon@2x.png" alt="Share icon"></a>
+                        <a href=""><img src="../assets/images/share-footer-icon@2x.png" alt="Share icon"></a>
                     </li>
                 </ul>
             </div>
