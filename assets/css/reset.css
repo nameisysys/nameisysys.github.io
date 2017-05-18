@@ -56,3 +56,21 @@ table {
 	border-spacing: 0;
 }
 a, a:hover, a:link, a:visited { text-decoration: none; }
+
+.editor-content, .editor-content * {
+    line-height: 1.6;
+    white-space: pre-wrap;
+}
+
+::selection {
+    background:#40659F;
+    color: #FFF;
+}
+::-moz-selection {
+    background:#40659F;
+    color: #FFF;
+}
+::-webkit-selection {
+    background:#40659F;
+    color: #FFF;
+}

@@ -5,14 +5,35 @@
     <meta charset="UTF-8">
     <title>eBrain</title>
     <!-- <meta name="description" content="DESCRIPTION"> -->
-    <link rel="stylesheet" href="/assets/css/reset.css">
-    <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/jquery.bxslider/jquery.bxslider.css">
+    <script
+  src="https://code.jquery.com/jquery-1.10.1.min.js"
+  integrity="sha256-SDf34fFWX/ZnUozXXEH0AeB+Ip3hvRsjLwp6QNTEb3k="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="assets/jquery.bxslider/jquery.bxslider.min.js"></script>
+    <script type="text/javascript">
+    $(function () {
+        var fixPoint = $('.search-wrapper').outerHeight();
+        $(window).scroll(function () {
+            console.log("scroll!");
+            if ($(window).scrollTop() >= fixPoint) {
+                $('.header-wrapper').addClass('sticky-header');
+            } else {
+                $('.header-wrapper').removeClass('sticky-header');
+            }
+        });
+        $('.bxslider').bxSlider();
+    })
+    </script>
     <!--[if lt IE 9]>
        <script src = "http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
      <![endif]-->
 </head>
 
 <body>
+<div class="wrapper" id="main">
     <div class="search-wrapper">
         <div class="inside clear">
             <div class="search clear">
@@ -20,28 +41,65 @@
                     <input type="text" maxlength="16">
                 </div>
                 <div class="search-icon">
-                    <a href="" target="blank"><img src="/assets/images/fb-icon@2x.png" alt="" class="icon"></a>
-                    <a href="" target="blank"><img src="/assets/images/youtube-icon@2x.png" alt="" class="icon"></a>
-                    <a href="" target="blank"><img src="/assets/images/share-icon@2x.png" alt="" class="icon"></a>
+                    <a href="" target="blank">
+                        <svg class="icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.5 48">
+                            <title>facebook</title>
+                            <path id="Facebook" class="cls-1" d="M23.6,15.1v6.6H18.7v8.2h4.9V54h10V29.9h6.7s.6-3.9.9-8.1H33.6V16.3a2.36,2.36,0,0,1,2.2-1.9h5.4V6H33.8C23.4,5.8,23.6,13.9,23.6,15.1Z" transform="translate(-18.7 -6)" />
+                        </svg>
+                    </a>
+                    <a href="" target="blank">
+                        <svg class="icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 39.1">
+                            <title>youtube</title>
+                            <g>
+                                <path class="cls-1" d="M55.6,13.8c-2-2.4-5.7-3.4-12.8-3.4H17.2c-7.2,0-11,1-13,3.6S2.3,20.1,2.3,25.2v9.6c0,9.8,2.3,14.7,14.9,14.7H42.9c6.1,0,9.5-.9,11.7-3s3.2-5.7,3.2-11.8V25.1C57.8,19.9,57.6,16.2,55.6,13.8ZM37.9,31.3,26.2,37.4a2.35,2.35,0,0,1-.8.2,1.61,1.61,0,0,1-.9-.3,1.86,1.86,0,0,1-.9-1.5V23.7a1.65,1.65,0,0,1,.9-1.5,2.24,2.24,0,0,1,1.8-.1L38,28.2a1.78,1.78,0,0,1,1,1.6A2.4,2.4,0,0,1,37.9,31.3Z" transform="translate(-2.3 -10.4)" />
+                            </g>
+                        </svg>
+                    </a>
+                    <a href="" target="blank">
+                        <svg class="icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.2 49.4">
+                            <title>share</title>
+                            <path class="cls-1" d="M45.6,36.7a9.1,9.1,0,0,0-7.1,3.5L23.1,32.3a8.52,8.52,0,0,0,.3-2.3,10.05,10.05,0,0,0-.4-2.5l15.3-7.8a8.81,8.81,0,0,0,7.2,3.6,9,9,0,1,0-9-9,8.52,8.52,0,0,0,.3,2.3L21.4,24.5A9.1,9.1,0,0,0,14.3,21a9,9,0,1,0,0,18,8.81,8.81,0,0,0,7.2-3.6l15.3,7.8a10.86,10.86,0,0,0-.4,2.5,9,9,0,0,0,18,0A8.73,8.73,0,0,0,45.6,36.7Z" transform="translate(-5.3 -5.3)" />
+                        </svg>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <section class="hero-wrapper" style="background-image: url('/assets/images/main-background.png');">
-<!--        <div class="hero-overlay"></div>-->
-        <div class="inside">
+    <section class="hero-wrapper" style="background-image: url('assets//images/main-background.png');">
+        <!--        <div class="hero-overlay"></div>-->
+        <div class="header-wrapper">
             <header class="clear">
-                <a href="" class="logo"><img src="/assets/images/eBrain-logo-w-icon@2x.png" alt=""></a>
+                <a href="/index.html" class="logo">
+                    <!--                <img src="../assets/images/brain-logo.svg" alt="">-->
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.4 63.1">
+                        <g id="symbol">
+                            <path class="cls-1" id="symbol-1" d="M35.5,41.9h5.4a4.69,4.69,0,0,0,4.7-4.7V27.6a4.69,4.69,0,0,0-4.7-4.7H30.4a4.81,4.81,0,0,1-4.7-4.6h0V8.7h0V5.6A4.69,4.69,0,0,0,21,.9H8A4.69,4.69,0,0,0,3.3,5.6V18.4A4.67,4.67,0,0,0,8,23H21.9a4.69,4.69,0,0,1,4.7,4.7v9.6A4.69,4.69,0,0,1,21.9,42H8a4.69,4.69,0,0,0-4.7,4.7V59.5A4.66,4.66,0,0,0,8,64H20.8a4.69,4.69,0,0,0,4.7-4.7V56.1h0V46.5A4.62,4.62,0,0,1,29,42h0a1.27,1.27,0,0,1,.6-.1h5.9Z" transform="translate(-3.3 -0.9)" />
+                            <path class="cls-1" id="symbol-2" d="M42.5.9H36.6a3,3,0,0,0-3,3V9.8a3,3,0,0,0,3,3h5.9a3,3,0,0,0,3-3V3.9A3,3,0,0,0,42.5.9Z" transform="translate(-3.3 -0.9)" />
+                            <path class="cls-1" id="symbol-3" d="M42.5,52.1H36.6a3,3,0,0,0-3,3V61a3,3,0,0,0,3,3h5.9a3,3,0,0,0,3-3V55.1A3,3,0,0,0,42.5,52.1Z" transform="translate(-3.3 -0.9)" />
+                        </g>
+                        <g id="text">
+                            <path class="cls-2" d="M201.1,11.2h-3.3a1.9,1.9,0,0,0-2.1,2.1v3.3a1.86,1.86,0,0,0,2.1,2.1h3.3a1.86,1.86,0,0,0,2.1-2.1V13.3C203.2,11.9,202.6,11.2,201.1,11.2Z" transform="translate(-3.3 -0.9)" />
+                            <rect class="cls-2" x="192.6" y="23" width="7.2" height="29.2" />
+                            <path class="cls-2" d="M230.6,23c-4.3,0-8.5,2-12.6,5.2l-.5-4.3h-6.1V53h7.3l-.1-20.3c4.1-2.3,6.7-3.6,9.7-3.6,2.3,0,3.1.9,3.1,4.2V53h7.3V31.1C238.7,25.9,235.8,23,230.6,23Z" transform="translate(-3.3 -0.9)" />
+                            <path class="cls-2" d="M93.9,33.1c0-6.6-3.8-10.1-13.3-10.1-9.9,0-14.1,3.8-14.1,15.4,0,11.1,4,15.4,14.6,15.4,3.7,0,8.9-.5,12-2l-.7-4.6a104.49,104.49,0,0,1-10.5.7c-5,0-7.2-1.1-7.8-6.4H86C91.5,41.5,93.9,38.4,93.9,33.1Zm-9.8,3.3H74c.2-6.1,1.8-7.7,6.9-7.7,4.5,0,5.8,1.2,5.8,4.3C86.7,34.6,86.4,36.4,84.1,36.4Z" transform="translate(-3.3 -0.9)" />
+                            <path class="cls-2" d="M122.6,31.8v-.2c5-.5,7-3.5,7-9.4,0-8.5-3.7-10.7-14.1-10.7-6.6,0-10.1.1-14.5.5V53c4.9.4,8.9.5,16.4.5,9.6,0,13.5-2.3,13.5-10.7C130.8,36.2,128.8,32.4,122.6,31.8ZM108.3,17.5h6.9c5.5,0,7.3,1.1,7.3,5.7s-1.7,5.9-6.7,5.9h-7.4V17.5Zm7.8,30-7.8-.1v-13h7.6c5.7.1,7.5,1.5,7.5,7C123.4,46.4,121.7,47.5,116.1,47.5Z" transform="translate(-3.3 -0.9)" />
+                            <path class="cls-2" d="M144.2,28.1l-.7-4.3h-5.7V53h7.3V32.4c4.2-1.6,6.9-2.6,9.6-2.6h2.1l.8-6.8h-1.4C152.4,23,148.2,24.9,144.2,28.1Z" transform="translate(-3.3 -0.9)" />
+                            <path class="cls-2" d="M176.8,23a107.41,107.41,0,0,0-14.6,1.4l.7,5.1c4.6-.4,9.5-.6,12.2-.6,4.2,0,5.3.8,5.4,4.2v1.8h-11c-5.5,0-8.6,2.7-8.6,7.3v3c0,5.5,3.9,8.5,9.2,8.5a15,15,0,0,0,11.1-5.1L182,53h5.7V33.2C187.8,25.4,184,23,176.8,23Zm3.7,21.4a14.17,14.17,0,0,1-8.6,3.5c-2.6,0-3.8-1.1-3.8-3.6V43.2c0-2,.7-3.2,3.1-3.3h9.3Z" transform="translate(-3.3 -0.9)" />
+                        </g>
+                    </svg>
+                </a>
                 <nav>
-                    <ul class="navigation">
+                    <ul class="navigation clear">
                         <li><a href="">Home</a></li>
                         <li><a href="">About us</a></li>
                         <li><a href="">Our service</a></li>
-                        <li><a href="">News&amp;Info</a></li>
+                        <li><a href="html/news.html">News&amp;Info</a></li>
                         <li><a href="">Contact</a></li>
                     </ul>
                 </nav>
             </header>
+        </div>
+        <div class="inside">
             <div class="hero-caption">
                 <h1 id="partner">The Sincere Partner for Software Professionals</h1>
                 <h1 id="eBrain">eBrain</h1>
@@ -49,7 +107,7 @@
                 <a href="" target="" class="below-btn">WHY eBrain</a>
                 <div class="video-btn">
                     <span class="caption caption-left">WATCH HOW</span>
-                    <a href=""><img src="/assets/images/play-bt@2x.png" alt=""></a>
+                    <a href=""><img src="assets//images/play-bt@2x.png" alt=""></a>
                     <span class="caption caption-right">WE CAN HELP YOU</span>
                 </div>
             </div>
@@ -59,70 +117,70 @@
         <div class="inside clear">
             <h1 class="section-title">WHY eBrain</h1>
             <div class="col tech">
-                <img class="why-sub-img" src="/assets/images/icon-graph@2x.png" alt="">
+                <img class="why-sub-img" src="assets//images/icon-graph@2x.png" alt="">
                 <h2 class="why-sub-title">Tech</h2>
                 <p class="why-sub-text">소프트웨어 분야를 오랜 시간·꾸준히·깊게 경험한 Professional로 구성된 eBrain Member들이 다양한 기술 분야의 컨설팅을 제공합니다.</p>
             </div>
             <div class="col career">
-                <img class="why-sub-img" src="/assets/images/icon-briefcase@2x.png" alt="">
+                <img class="why-sub-img" src="assets//images/icon-briefcase@2x.png" alt="">
                 <h2 class="why-sub-title">Career</h2>
                 <p class="why-sub-text">빠르게 변화하는 IT 분야에서 각 개인에 꼭 맞는 경력이 될 수 있도록 방향을 제시해 드립니다.</p>
             </div>
             <div class="col life">
-                <img class="why-sub-img" src="/assets/images/icon-people@2x.png" alt="">
+                <img class="why-sub-img" src="assets//images/icon-people@2x.png" alt="">
                 <h2 class="why-sub-title">Life</h2>
                 <p class="why-sub-text">개발자 커뮤니티 운영, 세미나·컨퍼런스 개최 등 다채로운 활동을 통해 기술을 넘어 행복한 개발자의 삶을 함께 만들어 갑니다.</p>
             </div>
         </div>
     </section>
     <section class="about-eBrain">
-<!--        <div class="inside">-->
-            <h1 class="section-title">ABOUT US</h1>
-            <div class="row consulting">
-                <div class="col about-sub-img"></div>
-                <div class="col about-sub-text">
-                    <h2>eBrain <em>Consulting</em></h2>
-                    <h3>“Tech Talent Search Firm”</h3>
-                    <p>IT전문 Talent Search Firm의 자존심을 걸고, 개발자를 이해하고 우대하는 기업과 인성·기술을 겸비한 훌륭한 인재를 연결해 드립니다.</p>
+        <!--        <div class="inside">-->
+        <h1 class="section-title">ABOUT US</h1>
+        <div class="row consulting">
+            <div class="col about-sub-img"></div>
+            <div class="col about-sub-text">
+                <h2>eBrain <em>Consulting</em></h2>
+                <h3>“Tech Talent Search Firm”</h3>
+                <p>IT전문 Talent Search Firm의 자존심을 걸고, 개발자를 이해하고 우대하는 기업과 인성·기술을 겸비한 훌륭한 인재를 연결해 드립니다.</p>
+                <a href="" class="view-btn">View More</a>
+            </div>
+        </div>
+        <div class="row management">
+            <div class="col about-sub-text">
+                <div>
+                    <h2>eBrain <em>Management</em></h2>
+                    <h3>"하고 싶은 일을 원하는 때까지 하도록 돕는 것"</h3>
+                    <p>바로 eBrain Management에서 추구하는 최고의 가치입니다. 그 가치 실현을 위해 개발자를 위한 컨설팅, 경력 관리, 교육 등 맞춤 서비스를 제공합니다.</p>
                     <a href="" class="view-btn">View More</a>
                 </div>
             </div>
-            <div class="row management">
-                <div class="col about-sub-text">
-                    <div>
-                        <h2>eBrain <em>Management</em></h2>
-                        <h3>"하고 싶은 일을 원하는 때까지 하도록 돕는 것"</h3>
-                        <p>바로 eBrain Management에서 추구하는 최고의 가치입니다. 그 가치 실현을 위해 개발자를 위한 컨설팅, 경력 관리, 교육 등 맞춤 서비스를 제공합니다.</p>
-                        <a href="" class="view-btn">View More</a>
-                    </div>
-                </div>
-                <div class="col about-sub-img"></div>
-            </div>
-<!--        </div>-->
+            <div class="col about-sub-img"></div>
+        </div>
+        <!--        </div>-->
     </section>
     <section class="more-eBrain">
         <div class="inside clear">
             <h1 class="section-title">MORE SERVICES</h1>
             <div class="col okky">
-                <div class="img-wrap"><img class="more-sub-img" src="/assets/images/okky-logo@2x.png" alt=""></div>
+                <div class="img-wrap"><img class="more-sub-img" src="assets//images/okky-logo@2x.png" alt=""></div>
                 <h2 class="more-sub-title">행복한 개발자 세상</h2>
                 <p class="more-sub-text">소프트웨어 분야를 오랜 시간·꾸준히·깊게 경험한 Professional로 구성된 eBrain Member들이 다양한 기술 분야의 컨설팅을 제공합니다.</p>
                 <a href="" class="view-btn">View More</a>
             </div>
             <div class="col nagaja">
-                <div class="img-wrap"><img class="more-sub-img" src="/assets/images/nagaja-logo@2x.png" alt=""></div>
+                <div class="img-wrap"><img class="more-sub-img" src="assets//images/nagaja-logo@2x.png" alt=""></div>
                 <h2 class="more-sub-title">해외 취업 희망 개발자 커뮤니티 운영</h2>
                 <p class="more-sub-text">빠르게 변화하는 IT 분야에서 각 개인에 꼭 맞는 경력이 될 수 있도록 방향을 제시해 드립니다.</p>
                 <a href="" class="view-btn">View More</a>
             </div>
             <div class="col ted">
-                <div class="img-wrap"><img class="more-sub-img" src="/assets/images/it-ed-logo@2x.png" alt=""></div>
+                <div class="img-wrap"><img class="more-sub-img" src="assets//images/it-ed-logo@2x.png" alt=""></div>
                 <h2 class="more-sub-title">IT 이벤트 소식 커뮤니티 운영</h2>
                 <p class="more-sub-text">개발자 커뮤니티 운영, 세미나·컨퍼런스 개최 등 다채로운 활동을 통해 기술을 넘어 행복한 개발자의 삶을 함께 만들어 갑니다.</p>
                 <a href="" class="view-btn">View More</a>
             </div>
             <div class="col sistar">
-                <div class="img-wrap"><img class="more-sub-img" src="/assets/images/sistar-logo@2x.png" alt=""></div>
+                <div class="img-wrap"><img class="more-sub-img" src="assets//images/sistar-logo@2x.png" alt=""></div>
                 <h2 class="more-sub-title">바람직한 SI 프로젝트</h2>
                 <p class="more-sub-text">개발자 커뮤니티 운영, 세미나·컨퍼런스 개최 등 다채로운 활동을 통해 기술을 넘어 행복한 개발자의 삶을 함께 만들어 갑니다.</p>
                 <a href="" class="view-btn">View More</a>
@@ -133,14 +191,14 @@
         <div class="inside">
             <h1 class="section-title">CUSTOMER PRAISE</h1>
             <div class="carousel-wrapper">
+<!--
                 <div class="carousel">
                     <div class="carousel-inner">
                         <div class="carousel-item">
                             <p class="carousel-caption">
-                                “개발자를 인정하고 대우하는 회사에만 추천 해주는 국내 유일 서칭펌.
-                                처음부터 끝까지 책임지고 적극 추천 하는 전문가들 덕분에 성공스러운 이직을 했습니다.”
+                                “개발자를 인정하고 대우하는 회사에만 추천 해주는 국내 유일 서칭펌. 처음부터 끝까지 책임지고 적극 추천 하는 전문가들 덕분에 성공스러운 이직을 했습니다.”
                             </p>
-                            <img class="carousel-img" src="/assets/images/photo@2x.png" alt="">
+                            <img class="carousel-img" src="assets//images/photo@2x.png" alt="">
                             <p class="carousel-name">Jang Ho Hwang</p>
                             <p class="carousel-job">
                                 <span class="carousel-position">Front End Developer</span>
@@ -149,10 +207,9 @@
                         </div>
                         <div class="carousel-item">
                             <p class="carousel-caption">
-                                “개발자를 인정하고 대우하는 회사에만 추천 해주는 국내 유일 서칭펌.
-                                처음부터 끝까지 책임지고 적극 추천 하는 전문가들 덕분에 성공스러운 이직을 했습니다.”
+                                “개발자를 인정하고 대우하는 회사에만 추천 해주는 국내 유일 서칭펌. 처음부터 끝까지 책임지고 적극 추천 하는 전문가들 덕분에 성공스러운 이직을 했습니다.”
                             </p>
-                            <img class="carousel-img" src="/assets/images/photo@2x.png" alt="">
+                            <img class="carousel-img" src="assets//images/photo@2x.png" alt="">
                             <p class="carousel-name">Jang Ho Hwang</p>
                             <p class="carousel-job">
                                 <span class="carousel-position">Front End Developer</span>
@@ -168,6 +225,31 @@
                 </ul>
                 <button class="carousel-navigator left" type="button">&lt;</button>
                 <button class="carousel-navigator right" type="button">&gt;</button>
+-->
+                <ul class="bxslider">
+                    <li class="carousel-item">
+                        <p class="carousel-caption">
+                            “개발자를 인정하고 대우하는 회사에만 추천 해주는 국내 유일 서칭펌. 처음부터 끝까지 책임지고 적극 추천 하는 전문가들 덕분에 성공스러운 이직을 했습니다.”
+                        </p>
+                        <img class="carousel-img" src="assets//images/photo@2x.png" alt="">
+                        <p class="carousel-name">Jang Ho Hwang</p>
+                        <p class="carousel-job">
+                            <span class="carousel-position">Front End Developer</span>
+                            <span class="carousel-position">N본사 2017 입사</span>
+                        </p>
+                    </li>
+                    <li class="carousel-item">
+                        <p class="carousel-caption">
+                            “개발자를 인정하고 대우하는 회사에만 추천 해주는 국내 유일 서칭펌. 처음부터 끝까지 책임지고 적극 추천 하는 전문가들 덕분에 성공스러운 이직을 했습니다.”
+                        </p>
+                        <img class="carousel-img" src="assets//images/photo@2x.png" alt="">
+                        <p class="carousel-name">Jang Ho Hwang</p>
+                        <p class="carousel-job">
+                            <span class="carousel-position">Front End Developer</span>
+                            <span class="carousel-position">N본사 2017 입사</span>
+                        </p>
+                    </li>
+                </ul>
             </div>
         </div>
     </section>
@@ -183,35 +265,35 @@
             <h1 class="section-title">NEWS &amp; INFORMATION</h1>
             <ul>
                 <li class="news-item clear">
-                    <div class="news-item-img" style="background-image:url('/assets/images/consulting-img@2x.png');">
+                    <div class="news-item-img" style="background-image:url('assets//images/consulting-img@2x.png');">
                         <span class="news-type academy">Academy</span>
                     </div>
                     <div class="news-item-text">
                         <h2 class="news-title">실리콘밸리에서의 경력관리실리콘밸리에서의 경력관리</h2>
                         <p class="news-date">Posted 06.12.03</p>
-                        <p class="news-content">죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 되</p>
+                        <p class="news-preview">죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 되</p>
                         <a href="" class="view-btn">Read More</a>
                     </div>
                 </li>
                 <li class="news-item clear">
-                    <div class="news-item-img" style="background-image:url('/assets/images/consulting-img@2x.png');">
+                    <div class="news-item-img" style="background-image:url('assets//images/consulting-img@2x.png');">
                         <span class="news-type blog">Blog</span>
                     </div>
                     <div class="news-item-text">
                         <h2 class="news-title">실리콘밸리에서의 경력관리</h2>
                         <p class="news-date">Posted 06.12.03</p>
-                        <p class="news-content">죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 되</p>
+                        <p class="news-preview">죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 되</p>
                         <a href="" class="view-btn">Read More</a>
                     </div>
                 </li>
                 <li class="news-item clear">
-                    <div class="news-item-img" style="background-image:url('/assets/images/consulting-img@2x.png');">
+                    <div class="news-item-img" style="background-image:url('assets//images/consulting-img@2x.png');">
                         <span class="news-type news">News</span>
                     </div>
                     <div class="news-item-text">
                         <h2 class="news-title">실리콘밸리에서의 경력관리</h2>
                         <p class="news-date">Posted 06.12.03</p>
-                        <p class="news-content">죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 되</p>
+                        <p class="news-preview">죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 죠슈아 타일러는 실리콘밸리에 위치한 Course Hero라는 크라우드 교육 스타트업의 수석엔지니어입니다. 그는 1999년 스탠포드 대학을 졸업하고 제록스, HP에서 일을 하다가 벤처에서 일을 하게 되</p>
                         <a href="" class="view-btn">Read More</a>
                     </div>
                 </li>
@@ -230,7 +312,25 @@
     </section>
     <footer>
         <div class="inside clear">
-            <div class="logo"><img src="/assets/images/ebrain-logo-icon@2x.png" alt=""></div>
+            <div class="logo">
+                <!--                <img src="../assets/images/brain-logo.svg" alt="">-->
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 235.4 63.1">
+                    <g id="symbol">
+                        <path class="cls-1" id="symbol-1" d="M35.5,41.9h5.4a4.69,4.69,0,0,0,4.7-4.7V27.6a4.69,4.69,0,0,0-4.7-4.7H30.4a4.81,4.81,0,0,1-4.7-4.6h0V8.7h0V5.6A4.69,4.69,0,0,0,21,.9H8A4.69,4.69,0,0,0,3.3,5.6V18.4A4.67,4.67,0,0,0,8,23H21.9a4.69,4.69,0,0,1,4.7,4.7v9.6A4.69,4.69,0,0,1,21.9,42H8a4.69,4.69,0,0,0-4.7,4.7V59.5A4.66,4.66,0,0,0,8,64H20.8a4.69,4.69,0,0,0,4.7-4.7V56.1h0V46.5A4.62,4.62,0,0,1,29,42h0a1.27,1.27,0,0,1,.6-.1h5.9Z" transform="translate(-3.3 -0.9)" />
+                        <path class="cls-1" id="symbol-2" d="M42.5.9H36.6a3,3,0,0,0-3,3V9.8a3,3,0,0,0,3,3h5.9a3,3,0,0,0,3-3V3.9A3,3,0,0,0,42.5.9Z" transform="translate(-3.3 -0.9)" />
+                        <path class="cls-1" id="symbol-3" d="M42.5,52.1H36.6a3,3,0,0,0-3,3V61a3,3,0,0,0,3,3h5.9a3,3,0,0,0,3-3V55.1A3,3,0,0,0,42.5,52.1Z" transform="translate(-3.3 -0.9)" />
+                    </g>
+                    <g id="text">
+                        <path class="cls-2" d="M201.1,11.2h-3.3a1.9,1.9,0,0,0-2.1,2.1v3.3a1.86,1.86,0,0,0,2.1,2.1h3.3a1.86,1.86,0,0,0,2.1-2.1V13.3C203.2,11.9,202.6,11.2,201.1,11.2Z" transform="translate(-3.3 -0.9)" />
+                        <rect class="cls-2" x="192.6" y="23" width="7.2" height="29.2" />
+                        <path class="cls-2" d="M230.6,23c-4.3,0-8.5,2-12.6,5.2l-.5-4.3h-6.1V53h7.3l-.1-20.3c4.1-2.3,6.7-3.6,9.7-3.6,2.3,0,3.1.9,3.1,4.2V53h7.3V31.1C238.7,25.9,235.8,23,230.6,23Z" transform="translate(-3.3 -0.9)" />
+                        <path class="cls-2" d="M93.9,33.1c0-6.6-3.8-10.1-13.3-10.1-9.9,0-14.1,3.8-14.1,15.4,0,11.1,4,15.4,14.6,15.4,3.7,0,8.9-.5,12-2l-.7-4.6a104.49,104.49,0,0,1-10.5.7c-5,0-7.2-1.1-7.8-6.4H86C91.5,41.5,93.9,38.4,93.9,33.1Zm-9.8,3.3H74c.2-6.1,1.8-7.7,6.9-7.7,4.5,0,5.8,1.2,5.8,4.3C86.7,34.6,86.4,36.4,84.1,36.4Z" transform="translate(-3.3 -0.9)" />
+                        <path class="cls-2" d="M122.6,31.8v-.2c5-.5,7-3.5,7-9.4,0-8.5-3.7-10.7-14.1-10.7-6.6,0-10.1.1-14.5.5V53c4.9.4,8.9.5,16.4.5,9.6,0,13.5-2.3,13.5-10.7C130.8,36.2,128.8,32.4,122.6,31.8ZM108.3,17.5h6.9c5.5,0,7.3,1.1,7.3,5.7s-1.7,5.9-6.7,5.9h-7.4V17.5Zm7.8,30-7.8-.1v-13h7.6c5.7.1,7.5,1.5,7.5,7C123.4,46.4,121.7,47.5,116.1,47.5Z" transform="translate(-3.3 -0.9)" />
+                        <path class="cls-2" d="M144.2,28.1l-.7-4.3h-5.7V53h7.3V32.4c4.2-1.6,6.9-2.6,9.6-2.6h2.1l.8-6.8h-1.4C152.4,23,148.2,24.9,144.2,28.1Z" transform="translate(-3.3 -0.9)" />
+                        <path class="cls-2" d="M176.8,23a107.41,107.41,0,0,0-14.6,1.4l.7,5.1c4.6-.4,9.5-.6,12.2-.6,4.2,0,5.3.8,5.4,4.2v1.8h-11c-5.5,0-8.6,2.7-8.6,7.3v3c0,5.5,3.9,8.5,9.2,8.5a15,15,0,0,0,11.1-5.1L182,53h5.7V33.2C187.8,25.4,184,23,176.8,23Zm3.7,21.4a14.17,14.17,0,0,1-8.6,3.5c-2.6,0-3.8-1.1-3.8-3.6V43.2c0-2,.7-3.2,3.1-3.3h9.3Z" transform="translate(-3.3 -0.9)" />
+                    </g>
+                </svg>
+            </div>
             <div class="col">
                 <ul class="sitemap-wrapper">
                     <li class="menu-title home">
@@ -263,10 +363,10 @@
                     <li class="menu-title contact-info">
                         <ul class="sitemap-item-wrapper">
                             <li class="menu-item adress">
-                                1410 JNK Digital Tower.<br>
-                                111 Digital-ro 26-gil<br>
-                                Guro-gu, Seoul, Korea<br>
-                                Zip Code. 08390
+                                1410 JNK Digital Tower.
+                                <br> 111 Digital-ro 26-gil
+                                <br> Guro-gu, Seoul, Korea
+                                <br> Zip Code. 08390
                             </li>
                             <li class="menu-item tel">
                                 (+82) 02-6124-6140
@@ -284,18 +384,36 @@
                         <a href="">Follow us</a>
                     </li>
                     <li class="menu-title image-item">
-                        <a href=""><img src="/assets/images/facebook-logo-footer-icon@2x.png" alt="Facebook icon"></a>
+                        <a href="">
+                            <svg class="icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 22.5 48">
+                                <title>facebook</title>
+                                <path id="Facebook" class="cls-1" d="M23.6,15.1v6.6H18.7v8.2h4.9V54h10V29.9h6.7s.6-3.9.9-8.1H33.6V16.3a2.36,2.36,0,0,1,2.2-1.9h5.4V6H33.8C23.4,5.8,23.6,13.9,23.6,15.1Z" transform="translate(-18.7 -6)" />
+                            </svg>
+                        </a>
                     </li>
                     <li class="menu-title image-item">
-                        <a href=""><img src="/assets/images/youtube-footer-icon@2x.png" alt="Youtube icon"></a>
+                        <a href="">
+                            <svg class="icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 55.5 39.1">
+                                <title>youtube</title>
+                                <g>
+                                    <path class="cls-1" d="M55.6,13.8c-2-2.4-5.7-3.4-12.8-3.4H17.2c-7.2,0-11,1-13,3.6S2.3,20.1,2.3,25.2v9.6c0,9.8,2.3,14.7,14.9,14.7H42.9c6.1,0,9.5-.9,11.7-3s3.2-5.7,3.2-11.8V25.1C57.8,19.9,57.6,16.2,55.6,13.8ZM37.9,31.3,26.2,37.4a2.35,2.35,0,0,1-.8.2,1.61,1.61,0,0,1-.9-.3,1.86,1.86,0,0,1-.9-1.5V23.7a1.65,1.65,0,0,1,.9-1.5,2.24,2.24,0,0,1,1.8-.1L38,28.2a1.78,1.78,0,0,1,1,1.6A2.4,2.4,0,0,1,37.9,31.3Z" transform="translate(-2.3 -10.4)" />
+                                </g>
+                            </svg>
+                        </a>
                     </li>
                     <li class="menu-title image-item">
-                        <a href=""><img src="/assets/images/share-footer-icon@2x.png" alt="Share icon"></a>
+                        <a href="">
+                            <svg class="icon" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 49.2 49.4">
+                                <title>share</title>
+                                <path class="cls-1" d="M45.6,36.7a9.1,9.1,0,0,0-7.1,3.5L23.1,32.3a8.52,8.52,0,0,0,.3-2.3,10.05,10.05,0,0,0-.4-2.5l15.3-7.8a8.81,8.81,0,0,0,7.2,3.6,9,9,0,1,0-9-9,8.52,8.52,0,0,0,.3,2.3L21.4,24.5A9.1,9.1,0,0,0,14.3,21a9,9,0,1,0,0,18,8.81,8.81,0,0,0,7.2-3.6l15.3,7.8a10.86,10.86,0,0,0-.4,2.5,9,9,0,0,0,18,0A8.73,8.73,0,0,0,45.6,36.7Z" transform="translate(-5.3 -5.3)" />
+                            </svg>
+                        </a>
                     </li>
                 </ul>
             </div>
         </div>
     </footer>
+</div>
 </body>
 
 </html>
