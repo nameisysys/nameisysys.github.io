@@ -788,6 +788,14 @@ $smartphone-small: "screen and (max-width : 320px)";
     }
 }
 
+@media screen and (min-width : 321px) and (max-width : 368px) {
+    .hero-caption {
+        h1 {
+            font-size: 2.5rem;
+        }
+    }
+}
+
 @media #{$smartphone-small} {
     html {
         font-size: 11px;

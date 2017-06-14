@@ -609,6 +609,10 @@ footer {
   .speakers .speaker-about {
     max-width: 100%; } }
 
+@media screen and (min-width: 321px) and (max-width: 368px) {
+  .hero-caption h1 {
+    font-size: 2.5rem; } }
+
 @media screen and (max-width: 320px) {
   html {
     font-size: 11px; }
