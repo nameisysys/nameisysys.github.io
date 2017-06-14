@@ -7,7 +7,7 @@ html {
 
 .inside {
     max-width: 1148px;
-    padding: 90px 20px;
+    padding: 90px 50px;
     margin: 0 auto;
 }
 
@@ -35,7 +35,6 @@ html {
         font-size: 4.5rem;
         font-weight: bold;
         margin-bottom: 73px;
-        letter-spacing: 1.5px;
         span {
             font-weight: 400;
         }
@@ -292,9 +291,15 @@ html {
         p {
             margin-bottom: 15px;
         }
-        .sub span {
-            display: block;
+        .sub { 
+            color: #797979;
+            span {
+                display: block;
+            }
         }
+    }
+    .button {
+        margin-top: 30px;
     }
 }
 
@@ -433,7 +438,7 @@ footer {
     width: 260px;
     height: 82px;
     text-align: center;
-    font-size: 1.875rem;
+    font-size: 1.6rem;
     color: #fff;
     font-weight: 400;
     line-height: 82px;
@@ -456,11 +461,11 @@ footer {
     }
 }
 
-$smartphone: "screen and (max-width : 846px)";
+$smartphone-big: "screen and (max-width : 1023px)";
 $smartphone-mid: "screen and (max-width : 620px)";
 $smartphone-small: "screen and (max-width : 320px)";
 
-@media #{$smartphone} {
+@media #{$smartphone-big} {
     html {
         font-size: 13px;
     }
@@ -492,8 +497,6 @@ $smartphone-small: "screen and (max-width : 320px)";
             }
         }
         ul {
-            width: auto;
-            margin-left: 20px;
             li {
                 background-size: 22px;
                 padding-left: 30px;
@@ -675,11 +678,6 @@ $smartphone-small: "screen and (max-width : 320px)";
     html {
         font-size: 12px;
     }
-    .about-a {
-        ul {
-            margin-left: 40px;
-        }
-    }
     .schedule {
         .row {
             padding-left: 30px;
@@ -698,7 +696,7 @@ $smartphone-small: "screen and (max-width : 320px)";
     }
     .about-a {
         ul {
-            margin-left: 0;
+            width: auto;
         }
     }
 }

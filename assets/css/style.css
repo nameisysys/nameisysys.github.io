@@ -3,7 +3,7 @@ html {
 
 .inside {
   max-width: 1148px;
-  padding: 90px 20px;
+  padding: 90px 50px;
   margin: 0 auto; }
 
 .hero {
@@ -27,8 +27,7 @@ html {
     line-height: 1.2;
     font-size: 4.5rem;
     font-weight: bold;
-    margin-bottom: 73px;
-    letter-spacing: 1.5px; }
+    margin-bottom: 73px; }
     .hero-caption h1 span {
       font-weight: 400; }
   .hero-caption h2 {
@@ -249,8 +248,12 @@ html {
       display: block; }
     .registration .col p {
       margin-bottom: 15px; }
-    .registration .col .sub span {
-      display: block; }
+    .registration .col .sub {
+      color: #797979; }
+      .registration .col .sub span {
+        display: block; }
+  .registration .button {
+    margin-top: 30px; }
 
 .location {
   background-image: url("../images/grid_background.png");
@@ -364,7 +367,7 @@ footer {
   width: 260px;
   height: 82px;
   text-align: center;
-  font-size: 1.875rem;
+  font-size: 1.6rem;
   color: #fff;
   font-weight: 400;
   line-height: 82px;
@@ -383,7 +386,7 @@ footer {
     stroke-dasharray: 193, 551;
     stroke-dashoffset: 452; }
 
-@media screen and (max-width: 846px) {
+@media screen and (max-width: 1023px) {
   html {
     font-size: 13px; }
   .inside {
@@ -401,12 +404,9 @@ footer {
     margin-bottom: 60px; }
     .about-a .whatfor span {
       display: inline; }
-  .about-a ul {
-    width: auto;
-    margin-left: 20px; }
-    .about-a ul li {
-      background-size: 22px;
-      padding-left: 30px; }
+  .about-a ul li {
+    background-size: 22px;
+    padding-left: 30px; }
   .about-a .abs-image img {
     max-width: 100%; }
   .about-b .col {
@@ -529,8 +529,6 @@ footer {
 @media screen and (max-width: 620px) {
   html {
     font-size: 12px; }
-  .about-a ul {
-    margin-left: 40px; }
   .schedule .row {
     padding-left: 30px; } }
 
@@ -540,4 +538,4 @@ footer {
   .hero-caption h1 {
     font-size: 2.2rem; }
   .about-a ul {
-    margin-left: 0; } }
+    width: auto; } }
