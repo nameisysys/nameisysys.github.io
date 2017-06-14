@@ -298,7 +298,10 @@ html {
             }
         }
     }
-    .button {
+    .info {
+        height: 270px;
+    }
+    .apply {
         margin-top: 30px;
     }
 }
@@ -492,9 +495,6 @@ $smartphone-small: "screen and (max-width : 320px)";
         .whatfor {
             word-break: keep-all;
             margin-bottom: 60px;
-            span {
-                display: inline;
-            }
         }
         ul {
             li {
@@ -592,6 +592,9 @@ $smartphone-small: "screen and (max-width : 320px)";
             padding: 0;
             margin-bottom: 50px;
         }
+        .info {
+            height: auto;
+        }
     }
     
     .apply {
@@ -678,9 +681,21 @@ $smartphone-small: "screen and (max-width : 320px)";
     html {
         font-size: 12px;
     }
+    .about-a {
+        .whatfor {
+            span {
+                display: inline;
+            }
+        }
+    }
     .schedule {
         .row {
             padding-left: 30px;
+        }
+    }
+    .speakers {
+        .speaker-about {
+            max-width: 100%;
         }
     }
 }

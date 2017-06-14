@@ -252,7 +252,9 @@ html {
       color: #797979; }
       .registration .col .sub span {
         display: block; }
-  .registration .button {
+  .registration .info {
+    height: 270px; }
+  .registration .apply {
     margin-top: 30px; }
 
 .location {
@@ -402,8 +404,6 @@ footer {
   .about-a .whatfor {
     word-break: keep-all;
     margin-bottom: 60px; }
-    .about-a .whatfor span {
-      display: inline; }
   .about-a ul li {
     background-size: 22px;
     padding-left: 30px; }
@@ -471,6 +471,8 @@ footer {
       width: 100%;
       padding: 0;
       margin-bottom: 50px; }
+    .registration .info {
+      height: auto; }
   .apply {
     height: auto;
     display: block;
@@ -529,8 +531,12 @@ footer {
 @media screen and (max-width: 620px) {
   html {
     font-size: 12px; }
+  .about-a .whatfor span {
+    display: inline; }
   .schedule .row {
-    padding-left: 30px; } }
+    padding-left: 30px; }
+  .speakers .speaker-about {
+    max-width: 100%; } }
 
 @media screen and (max-width: 320px) {
   html {
