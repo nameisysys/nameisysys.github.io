@@ -22,18 +22,32 @@ html {
   vertical-align: middle;
   text-align: center;
   color: #fff;
-  padding-top: 70px; }
+  padding-top: 230px; }
   .hero-caption h1 {
     line-height: 1.2;
     font-size: 4.5rem;
     font-weight: bold;
-    margin-bottom: 73px; }
+    margin-bottom: 95px;
+    position: relative;
+    z-index: 2; }
     .hero-caption h1 span {
       font-weight: 400; }
   .hero-caption h2 {
     font-size: 2.625rem;
     margin-bottom: 28px;
-    font-weight: 400; }
+    font-weight: 400;
+    position: relative; }
+    .hero-caption h2:before {
+      display: block;
+      content: "";
+      width: 223px;
+      height: 638px;
+      background-image: url("../images/top-line.png");
+      position: absolute;
+      top: -638px;
+      left: 50%;
+      margin-left: -86px;
+      z-index: -1; }
   .hero-caption .sub-title {
     font-size: 2rem;
     font-weight: 300;
