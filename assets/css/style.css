@@ -533,6 +533,8 @@ footer {
     font-size: 12px; }
   .about-a .whatfor span {
     display: inline; }
+  .about-a ul {
+    width: 300px; }
   .schedule .row {
     padding-left: 30px; }
   .speakers .speaker-about {

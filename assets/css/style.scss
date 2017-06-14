@@ -687,6 +687,9 @@ $smartphone-small: "screen and (max-width : 320px)";
                 display: inline;
             }
         }
+        ul {
+            width: 300px;
+        }
     }
     .schedule {
         .row {
