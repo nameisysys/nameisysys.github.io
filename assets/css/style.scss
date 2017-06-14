@@ -57,7 +57,7 @@ html {
             top: -638px;
             left: 50%;
             margin-left: -86px;
-            z-index: -1;
+            z-index: 1;
         }
     }
     .sub-title {
@@ -289,6 +289,8 @@ html {
     .conf-info {
         line-height: 1.5;
         margin-bottom: 50px;
+        text-shadow: 0.5px 0.9px 5.8px rgba(0, 0, 0, 0.29);
+        font-family: 'Noto Sans KR', sans-serif;
         em {
             color: $base-skyblue;
         }
@@ -296,26 +298,43 @@ html {
             margin-bottom: 80px;
         }
     }
-    .col {
-        word-break: keep-all;
+    .separate-item {
         width: 50%;
         float: left;
-        font-size: 1.3rem;
+    }
+    .left {
+        background-color: rgba(14,41,74,.8);
+        .col { float: right; }
+    }
+    .right {
+        background-color: rgba(29,81,147,.63);
+        .col { float: left; }
+    }
+    .col {
+        width: 600px;
+        padding: 50px 25px;
+        word-break: keep-all;
+        font-size: 1.2rem;
         line-height: 1.4;
-        padding: 0 30px;
-        .price { font-size: 1.68rem; margin-bottom: 20px; display: block; }
+        .price { 
+            font-size: 1.68rem; 
+            margin-bottom: 20px; 
+            display: block; 
+            font-weight: bold;
+        }
         p {
-            margin-bottom: 15px;
+            margin-bottom: 30px;
         }
         .sub { 
-            color: #797979;
+            font-size: 1.2rem;
+            color: #dfdfdf;
             span {
-                display: block;
+                color: $base-skyblue;
             }
         }
     }
     .info {
-        height: 270px;
+        height: 330px;
     }
     .apply {
         margin-top: 30px;
@@ -414,14 +433,26 @@ html {
 
 footer {
     background-color: #182E4F;
-    padding: 70px 60px 30px 60px;
+    padding: 77px 60px 30px 60px;
     text-align: center;
     color: #fff;
     a { color: #fff; }
     .logo {
-        img { width: 202px; }
         font-size: 1.5rem;
         font-weight: normal;
+        position: relative;
+        &:before {
+            display: block;
+            content: "";
+            width: 153px;
+            height: 237px;
+            background-image: url("../images/bottom-line.png");
+            position: absolute;
+            top: -237px;
+            left: 50%;
+            z-index: 1;
+        }
+        img { width: 202px; }
         p { 
             line-height: 1.3;
             margin-top: 10px;
@@ -455,12 +486,12 @@ footer {
     position: relative;
     display: block;
     width: 260px;
-    height: 82px;
+    height: 72px;
     text-align: center;
     font-size: 1.6rem;
     color: #fff;
     font-weight: 400;
-    line-height: 82px;
+    line-height: 72px;
     margin: 0 auto;
     svg{
         position: absolute;
@@ -479,10 +510,29 @@ footer {
         stroke-dashoffset: 452;
     }
 }
+.no-svg .apply {
+    display: block;
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.68rem;
+    color: #fff;
+    background-color: $btn-skyblue;
+    border-radius: 35px;
+    margin: 0 auto 35px auto;
+}
 
 $smartphone-big: "screen and (max-width : 1023px)";
 $smartphone-mid: "screen and (max-width : 620px)";
 $smartphone-small: "screen and (max-width : 320px)";
+
+@media screen and (max-width : 1024px) {
+    .registration {
+        .col {
+            width: 100%;
+        }
+    }
+}
 
 @media #{$smartphone-big} {
     html {
@@ -496,8 +546,14 @@ $smartphone-small: "screen and (max-width : 320px)";
         height: auto;
     }
     .hero-caption {
+        padding-top: 70px;
         h1 {
             font-size: 3rem;
+        }
+        h2 {
+            &:before {
+                display: none;
+            }
         }
         .logo img {
             max-width: 35%;
@@ -603,10 +659,17 @@ $smartphone-small: "screen and (max-width : 320px)";
             padding-top: 50px;
             padding-bottom: 50px;
         }
+        .separate-item {
+            width: 100%;
+        }
         .col {
             width: 100%;
-            padding: 0;
-            margin-bottom: 50px;
+            font-size: 1.5rem;
+            margin-bottom: 0;
+            padding: 30px 20px;
+            .sub {
+                font-size: 1.5rem;
+            }
         }
         .info {
             height: auto;
@@ -681,11 +744,17 @@ $smartphone-small: "screen and (max-width : 320px)";
         padding: 50px 30px;
         .logo {
             margin-bottom: 30px;
+            &:before {
+                display: none;
+            }
         }
-        .left, .right { float: none; margin-bottom: 30px; }
+        .left, .right { float: none; margin-bottom: 30px; line-height: 1.3; word-break: keep-all; }
         .left .ask {
             display: block;
             margin-bottom: 10px;
+        }
+        .right span {
+            display: block;
         }
         .info {
             font-size: 1.5rem;

@@ -47,7 +47,7 @@ html {
       top: -638px;
       left: 50%;
       margin-left: -86px;
-      z-index: -1; }
+      z-index: 1; }
   .hero-caption .sub-title {
     font-size: 2rem;
     font-weight: 300;
@@ -244,30 +244,44 @@ html {
     font-weight: 500; }
   .registration .conf-info {
     line-height: 1.5;
-    margin-bottom: 50px; }
+    margin-bottom: 50px;
+    text-shadow: 0.5px 0.9px 5.8px rgba(0, 0, 0, 0.29);
+    font-family: 'Noto Sans KR', sans-serif; }
     .registration .conf-info em {
       color: #30c5f2; }
     .registration .conf-info:last-of-type {
       margin-bottom: 80px; }
-  .registration .col {
-    word-break: keep-all;
+  .registration .separate-item {
     width: 50%;
-    float: left;
-    font-size: 1.3rem;
-    line-height: 1.4;
-    padding: 0 30px; }
+    float: left; }
+  .registration .left {
+    background-color: rgba(14, 41, 74, 0.8); }
+    .registration .left .col {
+      float: right; }
+  .registration .right {
+    background-color: rgba(29, 81, 147, 0.63); }
+    .registration .right .col {
+      float: left; }
+  .registration .col {
+    width: 600px;
+    padding: 50px 25px;
+    word-break: keep-all;
+    font-size: 1.2rem;
+    line-height: 1.4; }
     .registration .col .price {
       font-size: 1.68rem;
       margin-bottom: 20px;
-      display: block; }
+      display: block;
+      font-weight: bold; }
     .registration .col p {
-      margin-bottom: 15px; }
+      margin-bottom: 30px; }
     .registration .col .sub {
-      color: #797979; }
+      font-size: 1.2rem;
+      color: #dfdfdf; }
       .registration .col .sub span {
-        display: block; }
+        color: #30c5f2; }
   .registration .info {
-    height: 270px; }
+    height: 330px; }
   .registration .apply {
     margin-top: 30px; }
 
@@ -347,14 +361,25 @@ html {
 
 footer {
   background-color: #182E4F;
-  padding: 70px 60px 30px 60px;
+  padding: 77px 60px 30px 60px;
   text-align: center;
   color: #fff; }
   footer a {
     color: #fff; }
   footer .logo {
     font-size: 1.5rem;
-    font-weight: normal; }
+    font-weight: normal;
+    position: relative; }
+    footer .logo:before {
+      display: block;
+      content: "";
+      width: 153px;
+      height: 237px;
+      background-image: url("../images/bottom-line.png");
+      position: absolute;
+      top: -237px;
+      left: 50%;
+      z-index: 1; }
     footer .logo img {
       width: 202px; }
     footer .logo p {
@@ -381,12 +406,12 @@ footer {
   position: relative;
   display: block;
   width: 260px;
-  height: 82px;
+  height: 72px;
   text-align: center;
   font-size: 1.6rem;
   color: #fff;
   font-weight: 400;
-  line-height: 82px;
+  line-height: 72px;
   margin: 0 auto; }
   .apply svg {
     position: absolute;
@@ -402,6 +427,21 @@ footer {
     stroke-dasharray: 193, 551;
     stroke-dashoffset: 452; }
 
+.no-svg .apply {
+  display: block;
+  width: 250px;
+  height: 70px;
+  line-height: 70px;
+  font-size: 1.68rem;
+  color: #fff;
+  background-color: #2DC0F2;
+  border-radius: 35px;
+  margin: 0 auto 35px auto; }
+
+@media screen and (max-width: 1024px) {
+  .registration .col {
+    width: 100%; } }
+
 @media screen and (max-width: 1023px) {
   html {
     font-size: 13px; }
@@ -409,10 +449,14 @@ footer {
     padding: 70px 30px; }
   .hero {
     height: auto; }
-  .hero-caption h1 {
-    font-size: 3rem; }
-  .hero-caption .logo img {
-    max-width: 35%; }
+  .hero-caption {
+    padding-top: 70px; }
+    .hero-caption h1 {
+      font-size: 3rem; }
+    .hero-caption h2:before {
+      display: none; }
+    .hero-caption .logo img {
+      max-width: 35%; }
   .about-a .difference {
     word-break: keep-all; }
   .about-a .whatfor {
@@ -481,10 +525,15 @@ footer {
     .registration .inside {
       padding-top: 50px;
       padding-bottom: 50px; }
+    .registration .separate-item {
+      width: 100%; }
     .registration .col {
       width: 100%;
-      padding: 0;
-      margin-bottom: 50px; }
+      font-size: 1.5rem;
+      margin-bottom: 0;
+      padding: 30px 20px; }
+      .registration .col .sub {
+        font-size: 1.5rem; }
     .registration .info {
       height: auto; }
   .apply {
@@ -533,12 +582,18 @@ footer {
     padding: 50px 30px; }
     footer .logo {
       margin-bottom: 30px; }
+      footer .logo:before {
+        display: none; }
     footer .left, footer .right {
       float: none;
-      margin-bottom: 30px; }
+      margin-bottom: 30px;
+      line-height: 1.3;
+      word-break: keep-all; }
     footer .left .ask {
       display: block;
       margin-bottom: 10px; }
+    footer .right span {
+      display: block; }
     footer .info {
       font-size: 1.5rem; } }
 
