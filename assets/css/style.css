@@ -147,7 +147,7 @@ html {
   background-image: linear-gradient(to top, #182E4F 0%, #233F68 49%, #315488 100%);
   color: #fff; }
   .speakers .row {
-    margin-bottom: 115px; }
+    margin-bottom: 55px; }
     .speakers .row:last-of-type {
       margin-bottom: 0; }
   .speakers .sub-title {
@@ -156,7 +156,8 @@ html {
     margin-bottom: 110px; }
   .speakers .photo {
     float: left;
-    margin-right: 60px; }
+    margin-right: 50px;
+    margin-bottom: 60px; }
     .speakers .photo img {
       width: 160px; }
   .speakers .desc {

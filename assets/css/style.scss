@@ -172,7 +172,7 @@ html {
     background-image: linear-gradient(to top, #182E4F 0%, #233F68 49%, #315488 100%);
     color: #fff;
     .row {
-        margin-bottom: 115px;
+        margin-bottom: 55px;
         &:last-of-type {
             margin-bottom: 0;
         }
@@ -184,7 +184,8 @@ html {
     }
     .photo {
         float: left;
-        margin-right: 60px;
+        margin-right: 50px;
+        margin-bottom: 60px;
         img {
             width: 160px;
         }
