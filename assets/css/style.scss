@@ -2,7 +2,7 @@ $base-skyblue: #30c5f2;
 $btn-skyblue: #2DC0F2;
 
 html {
-    font-size: 16px;
+    font-size: 14px;
 }
 
 .btn-transition {
@@ -23,8 +23,8 @@ html {
     height: 100%;
     position: relative;
     .inside {
-        display: table;
         height: 100%;
+        padding-top: 0;
     }
     .logo {
         position: absolute;
@@ -35,45 +35,17 @@ html {
 
 .hero-caption {
     width: 100%;
-    display: table-cell;
-    vertical-align: middle;
     text-align: center;
     color: #fff;
     //padding-top: 70px;
-    padding-top: 230px;
+    //padding-top: 230px;
     h1 {
-        line-height: 1;
-        font-size: 4.09rem;
-        font-weight: 600;
-        margin-bottom: 95px;
-        position: relative;
-        z-index: 2;
+        margin-bottom: 85px;
+        img {
+            margin-top: -80px;
+        }
         span {
-            display: block;
-        }
-        .technology {
-            font-size: 3.31rem;
-            margin-bottom: 30px;
-            letter-spacing: 0.2rem;
-        }
-        .developer {
-            letter-spacing: 0.3rem;
-            position: relative;
-            &:before {
-                display: block;
-                content: "";
-                width: 262px;
-                height: 452px;
-                background-image: url("../images/top-line.png");
-                position: absolute;
-                top: -452px;
-                left: 250px;
-                margin-left: -86px;
-                z-index: 1;
-            }
-        }
-        em {
-            color: $base-skyblue;
+            display: none;
         }
     }
     h2 {
@@ -86,6 +58,16 @@ html {
         font-weight: 300;
         margin-bottom: 68px;
         line-height: 1.2;
+        span {
+            display: block;
+        }
+        .map {
+            font-size: 2.5rem;
+        }
+        .conf {
+            font-size: 4.4rem;
+            font-weight: 400;
+        }
     }
     .info {
         line-height: 1.3;
@@ -173,7 +155,7 @@ html {
 }
 
 .speakers {
-    background-image: linear-gradient(to top, #182E4F 0%, #233F68 49%, #315488 100%);
+    background-image: linear-gradient(to top, #182E4F 0%, #3B65A4 100%);
     color: #fff;
     .row {
         margin-bottom: 55px;
@@ -210,16 +192,16 @@ html {
     }
     .speaker-about {
         word-break: keep-all;
-        font-size: 1.43rem; 
+        font-size: 1.562rem; 
         font-weight: 300;
-        line-height: 1.4;
+        line-height: 1.5;
         margin-top: 22px;
         a {
             color: $base-skyblue;
         }
-        span {
-            display: block;
-        }
+//        span {
+//            display: block;
+//        }
     }
 }
 
@@ -466,7 +448,7 @@ footer {
     color: #fff;
     a { color: #fff; }
     .logo {
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         font-weight: normal;
         position: relative;
         &:before {
@@ -491,7 +473,7 @@ footer {
         }
     }
     
-    .info { font-size: 1.125rem; }
+    .info { font-size: 1rem; }
     
     .left {
         float: left;
@@ -507,7 +489,7 @@ footer {
 }
 
 .logo img {
-    width: 173px;
+    width: 150px;
 }
 
 .apply {
@@ -518,7 +500,7 @@ footer {
     text-align: center;
     font-size: 1.6rem;
     color: #fff;
-    font-weight: 400;
+    font-weight: bold;
     line-height: 72px;
     margin: 0 auto;
     svg{
@@ -526,7 +508,7 @@ footer {
         top: 0;
         left: 0;
         rect {
-            stroke-width: 10;
+            stroke-width: 6;
             stroke-dasharray: 353, 0;
             stroke-dashoffset: 0;
             -webkit-transition: all 600ms ease;
@@ -536,6 +518,12 @@ footer {
     &:hover svg rect {
         stroke-dasharray: 193, 551;
         stroke-dashoffset: 452;
+    }
+    span {
+        background: linear-gradient(to right, #2FC2F2 0%,#91F6FE 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2FC2F2', endColorstr='#91F6FE',GradientType=1 );
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
     }
 }
 .no-svg .apply {
@@ -572,19 +560,48 @@ $smartphone-small: "screen and (max-width : 320px)";
     
     .hero {
         height: auto;
-    }
-    .hero-caption {
-        padding-top: 70px;
-        h1 {
-            font-size: 3rem;
-        }
-        h2 {
-            &:before {
-                display: none;
+        .logo {
+            top: 3%;
+            right: 5%;
+            img {
+                width: 70px;
             }
         }
-        .logo img {
-            max-width: 35%;
+    }
+    .hero-caption {
+        padding-top: 150px;
+        h1 {
+            img { display: none; }
+            line-height: 1;
+            font-size: 2.4rem;
+            font-weight: 600;
+            margin-bottom: 50px;
+            position: relative;
+            z-index: 2;
+            span {
+                display: block;
+            }
+            .technology {
+                font-size: 2rem;
+                margin-bottom: 10px;
+                letter-spacing: 0.2rem;
+            }
+            .developer {
+                letter-spacing: 0.3rem;
+                position: relative;
+            }
+            em {
+                color: $base-skyblue;
+            }
+        }
+        .sub-title {
+            margin-bottom: 0;
+            .map {
+                font-size: 1.9rem;
+            }
+            .conf {
+                font-size: 2rem;
+            }
         }
     }
     
@@ -714,9 +731,11 @@ $smartphone-small: "screen and (max-width : 320px)";
         width: 250px;
         font-size: 1.68rem;
         color: #fff;
-//        background-color: $btn-skyblue;
-        background-image: linear-gradient(to left, #2FC2F2 0%, #91F6FE 100%);
+        background-color: $btn-skyblue;
         border-radius: 35px;
+        span {
+            -webkit-text-fill-color: #fff;
+        }
     }
     
     .location {
@@ -772,6 +791,10 @@ $smartphone-small: "screen and (max-width : 320px)";
         padding: 50px 30px;
         .logo {
             margin-bottom: 30px;
+            font-size: 1.5rem;
+            img {
+                width: 170px;
+            }
             &:before {
                 display: none;
             }
@@ -792,7 +815,7 @@ $smartphone-small: "screen and (max-width : 320px)";
 
 @media #{$smartphone-mid} {
     html {
-        font-size: 12px;
+        font-size: 10px;
     }
     .about-a {
         .whatfor {
@@ -826,7 +849,7 @@ $smartphone-small: "screen and (max-width : 320px)";
 
 @media #{$smartphone-small} {
     html {
-        font-size: 11px;
+        font-size: 9px;
     }
     .hero-caption {
         h1 {
