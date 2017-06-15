@@ -5,6 +5,10 @@ html {
     font-size: 16px;
 }
 
+.btn-transition {
+  transition: all 100ms linear;
+}
+
 .inside {
     max-width: 1148px;
     padding: 90px 50px;
@@ -417,6 +421,10 @@ html {
         background-color: $btn-skyblue;
         border-radius: 35px;
         margin: 0 auto 35px auto;
+        &:hover {
+        @extend .btn-transition;
+        background-color: darken($btn-skyblue,10%);
+      }
     }
 }
 

@@ -1,6 +1,9 @@
 html {
   font-size: 16px; }
 
+.btn-transition, .button-wrapper a:hover {
+  transition: all 100ms linear; }
+
 .inside {
   max-width: 1148px;
   padding: 90px 50px;
@@ -347,6 +350,8 @@ html {
     background-color: #2DC0F2;
     border-radius: 35px;
     margin: 0 auto 35px auto; }
+    .button-wrapper a:hover {
+      background-color: #0ea9de; }
 
 .sponsors h3 {
   color: #555;
