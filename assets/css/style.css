@@ -11,10 +11,15 @@ html {
   background-position: center bottom;
   background-size: cover;
   width: 100%;
-  height: 100%; }
+  height: 100%;
+  position: relative; }
   .hero .inside {
     display: table;
     height: 100%; }
+  .hero .logo {
+    position: absolute;
+    top: 40px;
+    right: 60px; }
 
 .hero-caption {
   width: 100%;
@@ -24,30 +29,38 @@ html {
   color: #fff;
   padding-top: 230px; }
   .hero-caption h1 {
-    line-height: 1.2;
-    font-size: 4.5rem;
-    font-weight: bold;
+    line-height: 1;
+    font-size: 4.09rem;
+    font-weight: 600;
     margin-bottom: 95px;
     position: relative;
     z-index: 2; }
     .hero-caption h1 span {
-      font-weight: 400; }
+      display: block; }
+    .hero-caption h1 .technology {
+      font-size: 3.31rem;
+      margin-bottom: 30px;
+      letter-spacing: 0.2rem; }
+    .hero-caption h1 .developer {
+      letter-spacing: 0.3rem;
+      position: relative; }
+      .hero-caption h1 .developer:before {
+        display: block;
+        content: "";
+        width: 262px;
+        height: 452px;
+        background-image: url("../images/top-line.png");
+        position: absolute;
+        top: -452px;
+        left: 250px;
+        margin-left: -86px;
+        z-index: 1; }
+    .hero-caption h1 em {
+      color: #30c5f2; }
   .hero-caption h2 {
     font-size: 2.625rem;
     margin-bottom: 28px;
-    font-weight: 400;
-    position: relative; }
-    .hero-caption h2:before {
-      display: block;
-      content: "";
-      width: 223px;
-      height: 638px;
-      background-image: url("../images/top-line.png");
-      position: absolute;
-      top: -638px;
-      left: 50%;
-      margin-left: -86px;
-      z-index: 1; }
+    font-weight: 400; }
   .hero-caption .sub-title {
     font-size: 2rem;
     font-weight: 300;
@@ -69,10 +82,9 @@ html {
     color: #000;
     font-size: 1.875rem;
     line-height: 1.4;
-    font-weight: 400;
     margin-bottom: 80px; }
   .about-a ul {
-    width: 360px;
+    width: 400px;
     margin: 0 auto 80px auto; }
     .about-a ul li {
       width: 100%;
@@ -89,11 +101,9 @@ html {
     color: #777;
     font-size: 1.875rem;
     line-height: 1.3;
-    margin-bottom: 200px;
-    font-weight: 400; }
+    margin-bottom: 200px; }
     .about-a .whatfor .hyphen {
       color: #30c5f2;
-      font-weight: bold;
       display: inline; }
     .about-a .whatfor span {
       display: block; }
@@ -152,12 +162,10 @@ html {
     font-size: 1.375rem;
     color: #30c5f2; }
   .speakers .company {
-    font-size: 1.43rem;
-    font-weight: 300; }
+    font-size: 1.43rem; }
   .speakers .speaker-about {
     word-break: keep-all;
     font-size: 1.43rem;
-    font-weight: 300;
     line-height: 1.4;
     margin-top: 22px; }
     .speakers .speaker-about a {
@@ -169,8 +177,7 @@ html {
   text-align: center;
   margin-bottom: 60px;
   font-size: 2.375rem;
-  font-family: 'Noto Sans KR', sans-serif;
-  font-weight: 500; }
+  font-family: 'Noto Sans KR', sans-serif; }
   .section-title:after {
     width: 66px;
     height: 8px;
@@ -185,7 +192,6 @@ html {
   padding-bottom: 60px;
   min-height: 140px;
   color: #000;
-  font-weight: 400;
   position: relative; }
   .schedule .row:before {
     content: "";
@@ -240,8 +246,6 @@ html {
   text-align: center; }
   .registration a {
     color: #fff; }
-  .registration .section-title {
-    font-weight: 500; }
   .registration .conf-info {
     line-height: 1.5;
     margin-bottom: 50px;
