@@ -11,7 +11,7 @@
         
         <meta property="og:title" content="Tech HR Conference"/>
         <meta property="og:url" content="https://nameisysys.github.io/"/>
-        <meta property="og:image" content="https://nameisysys.github.io/assets/images/ebrain-logo-icon@2x.png"/>
+        <meta property="og:image" content="https://nameisysys.github.io/assets/images/tech_hr_facebook.png"/>
         <meta property="og:description" content="개발자의 삶 · 일  ·채용 전반에 관한 이야기를 나누는 컨퍼런스"/>
         
 	</head>
@@ -399,6 +399,27 @@
             //sr.reveal('.about-a ul li', 50);
             //sr.reveal('.about-b .col', 100);
             //sr.reveal('.section-title',{viewFactor: 4});
+        </script>
+        <script>
+            window.fbAsyncInit = function() {
+                FB.init({
+                    appId: '304512826643154',
+                    autoLogAppEvents: true,
+                    xfbml: true,
+                    version: 'v2.9'
+                });
+                FB.AppEvents.logPageView();
+            };
+            (function(d, s, id) {
+                var js, fjs = d.getElementsByTagName(s)[0];
+                if (d.getElementById(id)) {
+                    return;
+                }
+                js = d.createElement(s);
+                js.id = id;
+                js.src = "//connect.facebook.net/en_US/sdk.js";
+                fjs.parentNode.insertBefore(js, fjs);
+            }(document, 'script', 'facebook-jssdk'));
         </script>
         <script>
             (function(i, s, o, g, r, a, m) {
