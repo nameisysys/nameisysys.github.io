@@ -380,13 +380,13 @@
                 return (div.firstChild && div.firstChild.namespaceURI) == 'http://www.w3.org/2000/svg';
             };
             if (!supportsSvg()) {
-                document.documentElemement.classList.add("no-svg");
+                document.body.classList.add("no-svg");
             }
             
             var isIE = /*@cc_on!@*/false || !!document.documentMode;
             var isEdge = !isIE && !!window.StyleMedia;
             if (isIE || isEdge) {
-                document.documentElemement.classList.add("no-svg");
+                document.body.classList.add("no-svg");
             }
             
             //window.sr = ScrollReveal({ origin: 'bottom', duration: 2000, easing: 'cubic-bezier(0.19, 1, 0.22, 1)', viewFactor: 1 });
