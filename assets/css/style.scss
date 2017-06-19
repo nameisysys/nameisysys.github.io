@@ -538,6 +538,9 @@ footer {
     background-color: $btn-skyblue;
     border-radius: 35px;
     margin: 0 auto 35px auto;
+    svg {
+        display: none;
+    }
 }
 
 $smartphone-big: "screen and (max-width : 1023px)";

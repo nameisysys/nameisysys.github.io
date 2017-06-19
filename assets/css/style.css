@@ -444,6 +444,8 @@ footer {
   background-color: #2DC0F2;
   border-radius: 35px;
   margin: 0 auto 35px auto; }
+  .no-svg .apply svg {
+    display: none; }
 
 @media screen and (max-width: 1024px) {
   .registration .col {
