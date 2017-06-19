@@ -381,10 +381,15 @@
             };
             if (!supportsSvg()) {
                 document.documentElemement.classList.add("no-svg");
-                console.log(supportsSvg());
             }
             
-            window.sr = ScrollReveal({ origin: 'bottom', duration: 2000, easing: 'cubic-bezier(0.19, 1, 0.22, 1)', viewFactor: 1 });
+            var isIE = /*@cc_on!@*/false || !!document.documentMode;
+            var isEdge = !isIE && !!window.StyleMedia;
+            if (isIE || isEdge) {
+                document.documentElemement.classList.add("no-svg");
+            }
+            
+            //window.sr = ScrollReveal({ origin: 'bottom', duration: 2000, easing: 'cubic-bezier(0.19, 1, 0.22, 1)', viewFactor: 1 });
             //sr.reveal('.hero-caption h1',{ duration: 4000, delay: 400, distance: '10px' });
             //sr.reveal('.about-a ul li', 50);
             //sr.reveal('.about-b .col', 100);
