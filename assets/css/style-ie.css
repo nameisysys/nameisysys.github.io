@@ -1,0 +1,11 @@
+.apply {
+    display: block;
+    width: 250px;
+    height: 70px;
+    line-height: 70px;
+    font-size: 1.68rem;
+    color: #fff;
+    background-color: #2DC0F2;
+    border-radius: 35px;
+    margin: 0 auto 35px auto;
+}
