@@ -541,6 +541,9 @@ footer {
     svg {
         display: none;
     }
+    span {
+        background: none !important;
+    }
 }
 
 $smartphone-big: "screen and (max-width : 1023px)";

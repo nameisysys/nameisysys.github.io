@@ -446,6 +446,8 @@ footer {
   margin: 0 auto 35px auto; }
   .no-svg .apply svg {
     display: none; }
+  .no-svg .apply span {
+    background: none !important; }
 
 @media screen and (max-width: 1024px) {
   .registration .col {
