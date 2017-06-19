@@ -347,9 +347,18 @@ html {
 
 .sponsors .twinkle {
   text-align: center; }
+  .sponsors .twinkle img {
+    vertical-align: middle;
+    margin-right: 30px;
+    max-width: 100%; }
+  .sponsors .twinkle a:last-of-type img {
+    margin-right: 0; }
 
 .sponsors #woowa {
-  max-width: 122px; }
+  width: 122px; }
+
+.sponsors #kookmin {
+  width: 400px; }
 
 .sponsors .button-wrapper {
   margin-top: 75px; }
@@ -608,6 +617,9 @@ footer {
     margin-bottom: 70px; }
   .sponsors h4 {
     margin-bottom: 30px; }
+  .sponsors .twinkle img {
+    margin-bottom: 20px;
+    max-width: 100%; }
   .button-wrapper a {
     height: auto;
     display: block;
@@ -649,7 +661,9 @@ footer {
   .schedule .row {
     padding-left: 30px; }
   .speakers .speaker-about {
-    max-width: 100%; } }
+    max-width: 100%; }
+  .sponsors .twinkle img {
+    margin-right: 0; } }
 
 @media screen and (min-width: 321px) and (max-width: 368px) {
   .hero-caption h1 {

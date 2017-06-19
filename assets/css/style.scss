@@ -426,9 +426,20 @@ html {
     }
     .twinkle {
         text-align: center;
+        img {
+            vertical-align: middle;
+            margin-right: 30px;
+            max-width: 100%;
+        }
+        a:last-of-type img {
+            margin-right: 0;
+        }
     }
     #woowa {
-        max-width: 122px;
+        width: 122px;
+    }
+    #kookmin {
+        width: 400px;
     }
     .button-wrapper {
         margin-top: 75px;
@@ -779,6 +790,12 @@ $smartphone-small: "screen and (max-width : 320px)";
         h4 {
             margin-bottom: 30px;
         }
+        .twinkle {
+            img {
+                margin-bottom: 20px;
+                max-width: 100%;
+            }
+        }
     }
     
     .button-wrapper {
@@ -844,6 +861,13 @@ $smartphone-small: "screen and (max-width : 320px)";
     .speakers {
         .speaker-about {
             max-width: 100%;
+        }
+    }
+    .sponsors {
+        .twinkle {
+            img {
+                margin-right: 0;
+            }
         }
     }
 }
