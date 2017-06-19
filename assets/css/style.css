@@ -129,6 +129,7 @@ html {
 
 .speakers {
   background-image: linear-gradient(to top, #182E4F 0%, #3B65A4 100%);
+  background-color: #294977;
   color: #fff; }
   .speakers .row {
     margin-bottom: 55px; }
