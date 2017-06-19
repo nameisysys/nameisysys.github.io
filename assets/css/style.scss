@@ -522,6 +522,8 @@ footer {
     span {
         background: linear-gradient(to right, #2FC2F2 0%,#91F6FE 100%);
         filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2FC2F2', endColorstr='#91F6FE',GradientType=1 );
+        background-clip: text;
+        text-fill-color: transparent;
         -webkit-background-clip: text;
         -webkit-text-fill-color: transparent;
     }

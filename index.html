@@ -296,7 +296,7 @@
                                                 <stop offset="100%" stop-color="#91F6FE" />
                                             </linearGradient>
                                         </defs>
-                                        <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad1)" width="250" height="60"></rect>
+                                        <rect x="5" y="5" rx="25" fill="none" stroke="url(#grad2)" width="250" height="60"></rect>
                                     </svg>
                                     <span>50% 할인 등록</span>
                                 </a>
@@ -378,6 +378,7 @@
             };
             if (!supportsSvg()) {
                 document.documentElemement.classList.add("no-svg");
+                console.log(supportsSvg());
             }
             
             window.sr = ScrollReveal({ origin: 'bottom', duration: 2000, easing: 'cubic-bezier(0.19, 1, 0.22, 1)', viewFactor: 1 });
